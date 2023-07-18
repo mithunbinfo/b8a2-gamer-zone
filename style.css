@@ -20,6 +20,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+.gradient-color-2 {
+  background: linear-gradient(#f948b2, #f948b2, #8758f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 h3 {
   font-size: 48px;
   font-weight: 700;
@@ -182,4 +188,112 @@ p {
 
 .we-are-gamer-content button {
   margin: 20px 0;
+}
+/* ---------- We Are Gamer Section End ---------- */
+
+/* ---------- Online Game Section Start ---------- */
+.online-game {
+  padding: 50px 0;
+}
+
+.online-game > h3,
+.online-game > p {
+  text-align: center;
+}
+
+.online-game p {
+  padding: 20px 0 30px;
+}
+
+.online-game-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.card-img img {
+  width: 342px;
+  height: 400px;
+}
+
+.card-img {
+  position: relative;
+}
+
+.image-hover-div {
+  width: 338px;
+  height: 396px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid red;
+  border-radius: 18px;
+}
+
+.image-hover-div {
+  color: white;
+  font-size: 48px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.image-hover-div p {
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.image-hover-div {
+  display: none;
+}
+
+.card img:hover ~ .image-hover-div {
+  display: block;
+}
+
+.div-hover-content {
+  position: absolute;
+  top: 40%;
+  left: 34%;
+}
+/* ---------- Online Game Section End ---------- */
+
+/* ---------- Play Instantly End ---------- */
+.play-instantly {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.play-instantly-content {
+  text-align: right;
+  padding: 200px;
+}
+
+.main-image {
+  width: 100%;
+}
+
+.down-image {
+  width: 45%;
+  margin-top: -200px;
+  margin-left: -100px;
+}
+
+.play-games {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 50px;
+}
+
+.play-games-content {
+  padding: 200px;
+}
+
+.down-image-2 {
+  width: 45%;
+  margin-top: -200px;
+  margin-left: 420px;
 }
