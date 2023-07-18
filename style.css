@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+}
+
+:root {
+  --primary-color: #ff42a5;
+  --secondary-color: #8758f1;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.gradient-color {
+  background: linear-gradient(var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 45px;
+  color: #534c64;
+}
+
+h6 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 45px;
+  color: #534c64;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #534c64;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo h2 {
+  font-size: 45px;
+}
+
+.logo h2 span {
+  color: var(--primary-color);
+}
+
+.nav-bar ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-bar ul li {
+  list-style: none;
+}
+
+.nav-bar ul li a,
+.nav-bar ul p {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  color: #3c354f;
+}
+
+.nav-bar ul p {
+  text-decoration: none;
+  background-color: rgba(11, 02, 35, 0.1);
+  padding: 20px 30px;
+  border-radius: 8px;
+}
+
+.nav-bar ul p .fa-youtube {
+  color: #f61c0d;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.banner-content,
+.banner img {
+  width: 50%;
+}
+
+.banner-content {
+  background-image: url(/images/group14.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px 0;
+}
+
+.banner-content h2 {
+  font-size: 48px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.banner-content h1 {
+  font-size: 95px;
+  font-weight: 800;
+}
+
+.banner-content h6 {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.banner-content .fa-download,
+.banner-content .fa-circle-play,
+.banner-content .fa-user-group {
+  color: var(--primary-color);
+}
+
+.btn {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 48px;
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+.btn-1 {
+  color: #ffffff;
+  background-color: var(--primary-color);
+}
+
+.btn-2 {
+  color: #ffffff;
+  background-color: #4ec5f7;
+}
+
+.banner img {
+  width: 100%;
+}
+
+/* ---------- Header Section End ---------- */
+
+/* ---------- We Are Gamer Section Start ---------- */
+
+.gamer {
+  background-color: rgba(255, 66, 165, 0.03);
+}
+
+.we-are-gamer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: right;
+}
+
+.we-are-gamer-content h3 {
+  margin-bottom: 20px;
+}
+
+.we-are-gamer-content button {
+  margin: 20px 0;
+}
