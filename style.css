@@ -11,6 +11,7 @@
 
 .container {
   max-width: 1440px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
@@ -52,6 +53,7 @@ p {
   color: #534c64;
 }
 
+/* ---------- Header Section Start ---------- */
 .nav-bar {
   display: flex;
   align-items: center;
@@ -69,7 +71,8 @@ p {
   font-size: 45px;
 }
 
-.logo h2 span {
+.logo h2 span,
+.footer-logo h2 span {
   color: var(--primary-color);
 }
 
@@ -110,14 +113,10 @@ p {
 
 .banner-content,
 .banner img {
-  width: 50%;
+  max-width: 50%;
 }
 
 .banner-content {
-  background-image: url(/images/group14.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 200px 0;
 }
 
 .banner-content h2 {
@@ -173,6 +172,7 @@ p {
 
 .gamer {
   background-color: rgba(255, 66, 165, 0.03);
+  padding: 50px 0;
 }
 
 .we-are-gamer {
@@ -189,11 +189,16 @@ p {
 .we-are-gamer-content button {
   margin: 20px 0;
 }
+
+.we-are-gamer-img {
+  max-width: 100%;
+}
+
 /* ---------- We Are Gamer Section End ---------- */
 
 /* ---------- Online Game Section Start ---------- */
 .online-game {
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 .online-game > h3,
@@ -211,18 +216,13 @@ p {
   gap: 25px;
 }
 
-.card-img img {
-  width: 342px;
-  height: 400px;
-}
-
 .card-img {
   position: relative;
 }
 
 .image-hover-div {
-  width: 338px;
-  height: 396px;
+  width: 1fr;
+  height: 1fr;
   background-color: rgba(0, 0, 0, 0.5);
   border: 2px solid red;
   border-radius: 18px;
@@ -259,7 +259,7 @@ p {
 }
 /* ---------- Online Game Section End ---------- */
 
-/* ---------- Play Instantly End ---------- */
+/* ---------- Play Instantly Section Start ---------- */
 .play-instantly {
   display: flex;
   align-items: center;
@@ -280,10 +280,11 @@ p {
   margin-top: -200px;
   margin-left: -100px;
 }
+/* ---------- Play Instantly Section End ---------- */
 
+/* ---------- Play Games Section End ---------- */
 .play-games {
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
   gap: 50px;
 }
@@ -296,4 +297,159 @@ p {
   width: 45%;
   margin-top: -200px;
   margin-left: 420px;
+}
+/* ---------- Play Games Section End ---------- */
+
+/* ---------- Careers Section Start ---------- */
+.careers {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 100px 0;
+}
+
+.careers-content,
+.careers-image {
+  width: 50%;
+}
+
+.careers-section,
+.careers-left-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.careers-content-right {
+  text-align: right;
+}
+
+.careers-content p {
+  color: #ffffff;
+  padding: 50px 0;
+}
+
+.careers-content-right h6,
+.careers-content-left h6 {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.btn-3 {
+  margin: 20px 0;
+  color: var(--primary-color);
+  background-color: #ffffff;
+}
+
+.careers-image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Careers Section End ---------- */
+
+/* ---------- Button Section Start ---------- */
+.nine-button {
+  background-color: rgb(255, 66, 165, 0.03);
+}
+
+.button-list {
+  padding: 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.btn-bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 14px;
+  border: 2px solid #ffffff;
+  border-radius: 48px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #ffffff;
+}
+
+.btn-bottom:hover {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+/* ---------- Button Section End ---------- */
+
+/* ---------- Footer Section Start ---------- */
+footer {
+  background-color: #0b0223;
+  padding: 100px 0;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-logo h2 {
+  color: #ffffff;
+  font-size: 45px;
+}
+
+.footer-area > ul {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.footer-area > ul li,
+.footer-icon > ul li,
+.policy-menu > ul li {
+  list-style: none;
+}
+
+.footer-area > ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-icon > ul {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-icon > ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.policy-menu > ul {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 0 20px;
+}
+
+.policy-menu > ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.footer-area p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
 }
