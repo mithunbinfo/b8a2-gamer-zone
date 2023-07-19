@@ -146,7 +146,6 @@ nav {
 .banner-content h6 {
   font-size: 20px;
   font-weight: 500;
-  padding: 10px;
 }
 
 .banner-content .fa-download,
@@ -614,7 +613,6 @@ footer {
 
   .banner-content h6 {
     font-size: 15px;
-    padding: 0px;
   }
 
   .online-game-card {
