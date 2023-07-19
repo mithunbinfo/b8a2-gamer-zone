@@ -55,11 +55,15 @@ p {
 }
 
 /* ---------- Header Section Start ---------- */
+nav {
+  padding: 25px 0;
+  box-shadow: 0px 0px 7px -4px;
+}
+
 .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 0;
 }
 
 .logo {
@@ -106,6 +110,13 @@ p {
   color: #f61c0d;
 }
 
+.main-banner {
+  background-image: url(./images/group14.png);
+  background-repeat: no-repeat;
+  background-size: 50% 100%;
+  background-position: left;
+}
+
 .banner {
   display: flex;
   align-items: center;
@@ -118,7 +129,7 @@ p {
 }
 
 .banner-content {
-  padding: 50px;
+  padding: 98px 100px 98px 0;
 }
 
 .banner-content h2 {
@@ -480,6 +491,10 @@ footer {
 /* ---------- Breakpoint / Media Query / Responsive Section ---------- */
 
 @media only screen and (max-width: 992px) {
+  nav {
+    box-shadow: 0 0 0 0;
+  }
+
   .nav-bar,
   .nav-bar ul,
   .we-are-gamer,
@@ -502,6 +517,22 @@ footer {
     width: 100%;
   }
 
+  .main-banner {
+    background-image: none;
+  }
+
+  .banner-content {
+    background-image: url(./images/group14.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 10% 25%;
+  }
+
+  .gamer {
+    background-color: #ffffff;
+  }
+
   .play-instantly-img {
     padding: 20px 40px 20px 100px;
   }
@@ -510,8 +541,8 @@ footer {
     padding: 50px 130px 20px 40px;
   }
 
-  .banner-content {
-    padding: 25%;
+  .online-game p {
+    padding-bottom: 50px;
   }
 
   .banner,
@@ -543,6 +574,11 @@ footer {
     padding-left: 0;
   }
 
+  .play-instantly,
+  .play-games {
+    margin-bottom: 100px;
+  }
+
   .online-game-card {
     grid-template-columns: repeat(2, 250px);
     justify-content: space-around;
@@ -556,12 +592,29 @@ footer {
 }
 
 @media only screen and (max-width: 767.98px) {
+  .container {
+    padding: 0 20px;
+  }
+
   h3 {
     font-size: 36px;
   }
 
   .banner-content {
-    padding: 20% 5%;
+    padding: 20% 10%;
+  }
+
+  .banner-content h1 {
+    font-size: 60px;
+  }
+
+  .banner-content h2 {
+    font-size: 36px;
+  }
+
+  .banner-content h6 {
+    font-size: 15px;
+    padding: 0px;
   }
 
   .online-game-card {
@@ -569,7 +622,7 @@ footer {
   }
 
   .play-instantly-img {
-    padding: 20px 0px 0px 80px;
+    padding: 20px 15px 0px 80px;
   }
 
   .play-games-img {
@@ -581,7 +634,6 @@ footer {
     font-size: 12px;
   }
 
-  .btn-3,
   .btn-1,
   .btn-2 {
     font-size: 12px;
@@ -590,13 +642,17 @@ footer {
   }
 
   .btn-bottom {
-    gap: 5px;
-    padding: 2px 8px;
+    gap: 2px;
+    padding: 2px 5px;
     font-size: 10px;
   }
 
   .btn-bottom img {
     height: 20px;
+  }
+
+  .nine-button {
+    padding: 40px 0;
   }
 
   .footer-area > ul,
