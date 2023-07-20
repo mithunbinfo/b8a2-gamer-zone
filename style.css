@@ -1,3 +1,4 @@
+/* ---------- Universal / Default Section Start ---------- */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,7 @@
 
 .container {
   max-width: 1440px;
-  padding: 0 20px;
+  padding: 0 50px;
   margin: 0 auto;
 }
 
@@ -53,6 +54,7 @@ p {
   line-height: 30px;
   color: #534c64;
 }
+/* ---------- Universal / Default Section End ---------- */
 
 /* ---------- Header Section Start ---------- */
 nav {
@@ -154,6 +156,12 @@ nav {
   color: var(--primary-color);
 }
 
+.banner-button {
+  padding: 20px 0;
+  display: flex;
+  gap: 2rem;
+}
+
 .btn {
   font-size: 20px;
   font-weight: 600;
@@ -161,7 +169,6 @@ nav {
   border: none;
   border-radius: 48px;
   text-transform: uppercase;
-  margin: 20px;
 }
 
 .btn-1 {
@@ -180,7 +187,7 @@ nav {
 
 .gamer {
   background-color: rgba(255, 66, 165, 0.03);
-  padding: 50px 0 100px;
+  padding: 100px 0;
 }
 
 .we-are-gamer-img,
@@ -220,18 +227,18 @@ nav {
 }
 
 .online-game p {
-  padding: 20px 0 30px;
+  padding: 20px 20px 30px;
 }
 
 .online-game-card {
   display: grid;
-  grid-template-columns: repeat(4, 250px);
-  justify-content: space-evenly;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .card-img img {
-  width: 250px;
-  height: 320px;
+  width: 100%;
   border: 1px solid #ffffff;
 }
 
@@ -239,44 +246,42 @@ nav {
   position: relative;
 }
 
-.card {
-  width: 250px;
-}
-
-.image-hover-div {
-  width: 250px;
-  height: 320px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 2px solid var(--primary-color);
-  border-radius: 18px;
-  color: white;
-  font-size: 48px;
+.image-overlay {
   position: absolute;
   bottom: 0;
   top: 0;
   left: 0;
   right: 0;
+  height: calc(100% - 5px);
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 5px solid var(--primary-color);
+  border-radius: 18px;
+}
+
+.card-img:hover .image-overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  font-size: 3rem;
   text-align: center;
 }
-
-.image-hover-div p {
+.overlay-content p {
   color: var(--primary-color);
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
-.image-hover-div {
-  display: none;
-}
-
-.card img:hover ~ .image-hover-div {
-  display: block;
-}
-
-.div-hover-content {
-  position: absolute;
-  top: 40%;
-  left: 25%;
-}
 /* ---------- Online Game Section End ---------- */
 
 /* ---------- Play Instantly Section Start ---------- */
@@ -315,7 +320,7 @@ nav {
 .play-games {
   display: flex;
   align-items: center;
-  padding: 100px 0;
+  padding: 100px 50px;
 }
 
 .play-games-content {
@@ -377,7 +382,7 @@ nav {
 
 /* ---------- Careers Section End ---------- */
 
-/* ---------- Button Section Start ---------- */
+/* ---------- 9 Button Section Start ---------- */
 .nine-button {
   background-color: rgb(255, 66, 165, 0.03);
 }
@@ -387,26 +392,27 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  gap: 10px;
+  row-gap: 30px;
 }
 
 .btn-bottom {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 4px 14px;
+  padding: 0px 14px;
   border: 2px solid #ffffff;
   border-radius: 48px;
   font-size: 20px;
   font-weight: 600;
   background-color: #ffffff;
+  transition: 0.5s ease;
 }
 
 .btn-bottom:hover {
   border: 2px solid var(--primary-color);
   color: var(--primary-color);
 }
-/* ---------- Button Section End ---------- */
+/* ---------- 9 Button Section End ---------- */
 
 /* ---------- Footer Section Start ---------- */
 footer {
@@ -479,7 +485,14 @@ footer {
   font-weight: 500;
 }
 
-.footer-area p {
+.copyright-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.footer-area .copyright-text p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   font-weight: 500;
@@ -487,13 +500,14 @@ footer {
 }
 /* ---------- Footer Section End ---------- */
 
-/* ---------- Breakpoint / Media Query / Responsive Section ---------- */
-
-@media only screen and (max-width: 992px) {
+/* ---------- Breakpoint / Media Query / Responsive Section Start ---------- */
+/* ---------- Responsive Max Width 991.98px Start ---------- */
+@media only screen and (max-width: 991.98px) {
   nav {
     box-shadow: 0 0 0 0;
   }
 
+  .banner,
   .nav-bar,
   .nav-bar ul,
   .we-are-gamer,
@@ -528,6 +542,11 @@ footer {
     padding: 10% 25%;
   }
 
+  .banner-button {
+    padding: 10px 0;
+    gap: 0.5rem;
+  }
+
   .gamer {
     background-color: #ffffff;
   }
@@ -554,10 +573,6 @@ footer {
     justify-content: center;
   }
 
-  .banner .btn {
-    margin: 14px;
-  }
-
   .we-are-gamer,
   .online-game,
   .play-instantly h3,
@@ -573,23 +588,32 @@ footer {
     padding-left: 0;
   }
 
-  .play-instantly,
-  .play-games {
-    margin-bottom: 100px;
+  .online-game-card {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .online-game-card {
-    grid-template-columns: repeat(2, 250px);
-    justify-content: space-around;
+  .button-list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
   }
 
   .btn-bottom {
-    gap: 5px;
-    padding: 2px 8px;
-    font-size: 15px;
+    row-gap: 30px;
+    padding: 2px 6px;
+    font-size: 14px;
+  }
+
+  .copyright-text {
+    flex-direction: column;
+  }
+
+  .policy-menu {
+    padding-bottom: 30px;
   }
 }
+/* ---------- Responsive Max Width 991.98px End ---------- */
 
+/* ---------- Responsive Max Width 767.98px Start ---------- */
 @media only screen and (max-width: 767.98px) {
   .container {
     padding: 0 20px;
@@ -616,7 +640,7 @@ footer {
   }
 
   .online-game-card {
-    grid-template-columns: repeat(1, 250px);
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .play-instantly-img {
@@ -624,7 +648,11 @@ footer {
   }
 
   .play-games-img {
-    padding: 50px 80px 0 40px;
+    padding: 49px 80px 0 15px;
+  }
+
+  .play-games {
+    padding: 100px 20px;
   }
 
   .careers-content-left h6,
@@ -662,6 +690,17 @@ footer {
     grid-template-columns: repeat(2, auto);
   }
   .policy-menu p {
-    padding-top: 30px;
+    padding: 30px;
   }
 }
+/* ---------- Responsive Max Width 767.98px End ---------- */
+
+/* ---------- Responsive Max Width 576.98px Start ---------- */
+@media only screen and (max-width: 576.98px) {
+  .btn-bottom {
+    font-size: 9px;
+  }
+}
+/* ---------- Responsive Max Width 576.98px End ---------- */
+
+/* ---------- Breakpoint / Media Query / Responsive Section End ---------- */
